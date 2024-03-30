@@ -17,7 +17,7 @@ export default function ContactsPage() {
 
   return (
     <div>
-      <h2>Contacts page</h2>
+      <h2>Phonebook</h2>
       <ContactForm />
       <SearchBox />
       {loading && <b>Loading...</b>}
