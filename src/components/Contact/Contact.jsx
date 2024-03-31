@@ -31,7 +31,12 @@ export default function Contact({ contact: { id, name, number } }) {
         Delete
       </button>
       {modalIsOpen && (
-        <ModalContact onClose={closeModal} isOpen={modalIsOpen} id={id} />
+        <ModalContact
+          onClose={closeModal}
+          isOpen={modalIsOpen}
+          id={id}
+          name={name}
+        />
       )}
     </div>
   );

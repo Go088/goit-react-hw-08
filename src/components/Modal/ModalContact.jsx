@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 Modal.setAppElement("#root");
 
-export default function ModalContact({ isOpen, onClose, id }) {
+export default function ModalContact({ isOpen, onClose, id, name }) {
   const dispatch = useDispatch();
   const customStyles = {
     content: {
@@ -33,7 +33,7 @@ export default function ModalContact({ isOpen, onClose, id }) {
     <div>
       <Modal isOpen={isOpen} onClose={onClose} style={customStyles}>
         <div>
-          <b>Are you deleting a contact?</b>
+          <b>Are you deleting a contact? {name}</b>
           <button onClick={handleDelete}>Yes</button>
           <button onClick={onClose}>No</button>
         </div>
